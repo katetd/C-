@@ -1,4 +1,5 @@
 №1
+
 #include <iostream>
 #include <ctime> 
 #include <cstdlib>
@@ -31,7 +32,9 @@ int main()
 		cout << endl;
 	}
 }
+
    №2
+   
    #include <iostream>
 #include <iomanip> 
 #include <cstdlib> 
@@ -76,69 +79,87 @@ int main()
         cout << j+1 << " Row has " << parne[j] << " even elements" << endl;
     }
 }
-   №3
-   #include <iostream>
-#include<cstdlib>
-#include<ctime>
-using namespace std;
-int main() {
- int m=4, n=3;
- int elements[m];
- int array[m][n];
- srand(time(NULL));
- for(int i=0;i<m;i++)
-   elements[i] = 0;
- for(int i=0;i<m;i++){
-   for(int j=0;j<n;j++){
-     array[i][j]= rand()%10;
-   }
- }
- for(int i=0;i<m;i++){
-   for(int j=0;j<n;j++){
-     cout << array[i][j];
-       cout << array[i][j] <<  "  "; 
-   }
-cout <<endl;
- }
- for(int i=0;i<m;i++){
-   for(int j=0;j<n;j++){
-       elements[i]+=array[i][j];
-   }
- }
- for(int i=0;i<m;i++)
-   cout << "In " << i+1 << " row sum = " << elements[i] << endl;
-   }
-   №4
-#include <iostream>
-#include<cstdlib>
-#include<ctime>
-using namespace std;
-int main() {
-int m=6, n=4;
-int elements[n];
-int array[m][n];
-srand(time(NULL));
- for(int i=0;i<n;i++)
-   elements[i] = 0;
- for(int i=0;i<m;i++)
-   for(int j=0;j<n;j++)
-     array[i][j]= rand()%10;
- for(int i=0;i<m;i++){
-   for(int j=0;j<n;j++){
-     cout << array[i][j];
-       cout << array[i][j] << " ";
-   }
- cout<<endl;
- }
- for(int i=0;i<m;i++)
 
-   for(int j=0;j<n;j++) 
-       elements[j]+=array[i][j];
- for(int j=0;j<n;j++){
-   cout << "In " << j+1 << " column sum = " << elements[j] << endl;
- }
-}  
+   №3
+   
+  #include <iostream>
+#include <iomanip> 
+#include <cstdlib> 
+#include <ctime>
+using namespace std;
+
+int main(void) {
+    int m = 5;
+    int n = 7;
+    int arr[m][n];
+    
+    srand(time(NULL));
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++) 
+        {
+            arr[i][j] = rand() % 50;
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < m; i++)
+    {
+        int sum = 0;
+        for (int j = 0; j < n; j++)
+        {
+            sum += arr[i][j];
+        }
+        cout << "sum of row number " << i+1 << " equals " << sum << endl;
+    }
+}
+
+   №4
+   
+#include <iostream>
+#include <iomanip> 
+#include <cstdlib> 
+#include <ctime>
+using namespace std;
+
+int main() 
+{
+    int m=4;
+    int n=6;
+    int sum[n];
+    int arr[m][n];
+    
+    srand(time(NULL));
+    for(int i=0;i<n;i++)
+    {
+        sum[i] = 0;
+    }
+    
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            arr[i][j]= rand()%50;
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    for(int i=0;i<m;i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            sum[j] += arr[i][j];
+        }
+    }
+    for(int j=0;j<n;j++)
+    {
+        cout << "sum of column number " << j+1 << " equals " << sum[j] << endl;
+    }
+}
+
    №5
+   
    #include <iostream>
 #include <iomanip> 
 #include <cstdlib> 
@@ -181,6 +202,7 @@ int main(void) {
 }
 
    №6
+   
 #include <iostream>
 #include <iomanip> 
 #include <cstdlib> 
@@ -224,7 +246,9 @@ int main(void) {
     cout << "Smallest number: " << min << endl;
     cout << "Number of element: " << minnum << endl;
 }   
+
    №15
+   
    #include <iostream>
 #include <iomanip> 
 #include <cstdlib> 
