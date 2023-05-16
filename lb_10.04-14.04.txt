@@ -1,0 +1,122 @@
+10.04-14.04
+1.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person {
+public:
+    string name;
+    int age;
+    string occupation;
+    string address;
+    string email;
+};
+
+void print(Person* person) {
+    cout << person->name << " is " << person->age << " years old, and works as a " << person->occupation << "." << endl;
+    cout << "Address: " << person->address << endl;
+    cout << "Email: " << person->email << endl;
+}
+
+int main() {
+    Person person;
+    cout << "Enter name: ";
+    getline(cin, person.name);
+    cout << "Enter age: ";
+    cin >> person.age;
+    cin.ignore(); // ignore the newline character in the input buffer
+    cout << "Enter occupation: ";
+    getline(cin, person.occupation);
+    cout << "Enter address: ";
+    getline(cin, person.address);
+    cout << "Enter email: ";
+    getline(cin, person.email);
+
+    cout << "Meet " << person.name << ":" << endl;
+    print(&person);
+
+    return 0;
+}
+
+2.
+#include <iostream>
+
+using namespace std;
+
+class Square {
+private:
+int side;
+int area;
+
+public:
+Square(int s) {
+side = s;
+area = s * s;
+}
+    void set_side(int s) {
+        if (s >= 0) {
+            side = s;
+            area = s * s;
+    }
+}
+
+    void print() {
+     cout << "Side: " << side << endl;
+     cout << "Area: " << area << endl;
+    }
+
+};
+
+int main() {
+    Square sq(5);
+    sq.print();
+    sq.set_side(7);
+    sq.print();
+
+    sq.set_side(-2);
+    sq.print();
+
+return 0;
+
+3.
+#include <iostream>
+
+using namespace std;
+
+class Square {
+private:
+int side;
+int area;
+
+public:
+Square(int s) {
+side = s;
+area = s * s;
+}
+    void set_side(int s) {
+        if (s >= 0) {
+            side = s;
+            area = s * s;
+    }
+}
+
+    void print() {
+     cout << "Side: " << side << endl;
+     cout << "Area: " << area << endl;
+    }
+
+};
+
+int main() {
+    Square sq(5);
+    sq.print();
+    sq.set_side(7);
+    sq.print();
+
+    sq.set_side(-2);
+    sq.print();
+
+return 0;
